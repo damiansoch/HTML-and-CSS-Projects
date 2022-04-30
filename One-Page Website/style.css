@@ -125,6 +125,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .picture img {
   max-width: 100%;
