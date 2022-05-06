@@ -1,0 +1,33 @@
+body {
+  font-family: "Courgette", cursive;
+}
+.nav-link,
+a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.title {
+  transform: skew(40deg);
+  transform: rotate(10deg);
+}
+.card-img-top {
+  transform: rotate(-10deg);
+}
+.small_text {
+  font-size: 0.6rem;
+}
+.gallery_img {
+  width: 300px;
+  height: 200px;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.navbar .nav-item:hover .nav-link {
+  color: #fff;
+}
