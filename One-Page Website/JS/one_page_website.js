@@ -6,6 +6,8 @@ function openModal() {
 
 // Close the Modal
 function closeModal() {
+  document.getElementById("head").style.display = "flex";
+
   document.getElementById("myModal").style.display = "none";
 }
 
