@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./CSS/additional_CSS.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <title>Hello, world!</title>
   </head>
@@ -114,13 +115,19 @@
         <div class="row">
           <!-- card -->
           <div class="col-md-4 text-center">
-            <div class="card w-auto h-100 rounded-3">
+            <a
+              class="card w-auto h-100 rounded-3"
+              data-bs-toggle="offcanvas"
+              href="#offcanvas"
+              role="button"
+              aria-controls="offcanvas"
+            >
               <img
                 src="./Img/kongskullisland.jpg"
                 class="image-fluid rounded-3"
                 alt="..."
               />
-              <div class="card-body bg-light">
+              <d class="card-body bg-light">
                 <h4 class="card-title">Kong: Skull Island</h4>
                 <p class="card-text">
                   A team of scientists explore an uncharted island in the
@@ -133,12 +140,18 @@
                 <span class="badge rounded-pill bg-info">5:30 p.m.</span>
                 <span class="badge rounded-pill bg-info">7:00 p.m.</span>
                 <span class="badge rounded-pill bg-info">9:30 p.m.</span>
-              </div>
-            </div>
+              </d>
+            </a>
           </div>
           <!-- card -->
           <div class="col-md-4 text-center">
-            <div class="card w-auto h-100 rounded-3">
+            <a
+              class="card w-auto h-100 rounded-3"
+              data-bs-toggle="offcanvas"
+              href="#offcanvas"
+              role="button"
+              aria-controls="offcanvas"
+            >
               <img
                 src="./Img/ghostintheshell.jpg"
                 class="image-fluid rounded-3"
@@ -159,11 +172,17 @@
                 <span class="badge rounded-pill bg-info">7:00 p.m.</span>
                 <span class="badge rounded-pill bg-info">9:30 p.m.</span>
               </div>
-            </div>
+            </a>
           </div>
           <!-- card -->
           <div class="col-md-4 text-center">
-            <div class="card w-auto h-100 rounded-3">
+            <a
+              class="card w-auto h-100 rounded-3"
+              data-bs-toggle="offcanvas"
+              href="#offcanvas"
+              role="button"
+              aria-controls="offcanvas"
+            >
               <img
                 src="./Img/beautyandthebeast.jpg"
                 class="image-fluid rounded-3"
@@ -183,12 +202,85 @@
                 <span class="badge rounded-pill bg-info">7:00 p.m.</span>
                 <span class="badge rounded-pill bg-info">9:30 p.m.</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
       <!-- showtimes end--------------------------------------------------------------------------------- -->
-      <!-- form---------------------------------------------------------------------------------------- -->
+      <!-- offcanvas ------------------------------------------------------------------------------------ -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvas"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+            Additional info
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body text-center">
+          <div>
+            <h1>Some additiona info about the movie</h1>
+            <p class="mt-5">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+              ea magni fugit, nesciunt maxime molestiae maiores, reiciendis
+              odio, quibusdam cumque atque et quas ipsa autem blanditiis qui!
+              Esse, illo quo.
+            </p>
+          </div>
+          <div class="dropdown mt-5">
+            <button
+              class="btn btn-info dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+            >
+              Extra links
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >First website about the movie</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Second website about the movie</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Third website about the movie</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- offcanvas end--------------------------------------------------------------------------------- -->
+      <!-- Movie deals----------------------------------------------------------------------------------- -->
+      <div class="jumbotron bg-info text-center text-light mt-5">
+        <h1 class="display-4">MOVIE DEALS</h1>
+        <p class="text-secondary fs-5">Check our monthly deals...</p>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#register"
+          class="btn btn-info btn-outline-primary"
+        >
+          See our monthly move deals!
+        </button>
+      </div>
+
+      <!-- Movie deals end------------------------------------------------------------------------------- -->
+      <!-- signup form---------------------------------------------------------------------------------------- -->
       <div class="text-center" id="deals">
         <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
         <form>
@@ -201,10 +293,72 @@
               placeholder="Enter email"
             />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <a
+            tabindex="0"
+            class="btn btn-lg btn-info text-white popover-dismiss"
+            role="button"
+            data-bs-toggle="popover"
+            data-bs-trigger="focus"
+            data-bs-placement="top"
+            data-bs-content="Submit your email to recieve great movie reward deals!"
+            >Sign up!</a
+          >
         </form>
       </div>
-      <!-- form end------------------------------------------------------------------------------------ -->
+      <!-- signup form end------------------------------------------------------------------------------------ -->
+      <!-- form modal----------------------------------------------------------------------------------- -->
+      <div class="modal" tabindex="-1" id="register">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Register to recieve movie deals</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- -------------------------------------- -->
+              <form>
+                <fieldset class="form-group">
+                  <label for="Firstname" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="Firstname" />
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" />
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" />
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" />
+                </fieldset>
+              </form>
+              <!-- ---------------------------------- -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form modal end------------------------------------------------------------------------------------ -->
+
       <!-- fotter ----------------------------------------------------------------------------------- -->
       <div class="container my-5">
         <ul class="nav nav-inline">
@@ -245,5 +399,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script src="./JS/main.js"></script>
   </body>
 </html>

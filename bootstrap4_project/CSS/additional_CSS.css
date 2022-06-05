@@ -4,3 +4,8 @@
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
