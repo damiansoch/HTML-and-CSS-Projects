@@ -96,6 +96,7 @@ footer {
   -webkit-animation: moveNavText 5.75s;
   animation: moveNavText 5.75s;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 @keyframes moveNavText {
   from {
@@ -124,7 +125,7 @@ footer {
 #Typing_Video {
   position: fixed;
   right: 0;
-  bottom: 140px;
+  bottom: 80px;
   min-width: 100%;
   z-index: -1;
 }
@@ -150,6 +151,130 @@ footer {
     top: 0vw;
   }
 }
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+  width: 39.5vw;
+  height: auto;
+  padding-top: 4%;
+  position: relative;
+  margin: auto;
+}
+
+#Slideshow_Container a {
+  text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+  vertical-align: middle;
+  height: auto;
+  box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+/* Next and previous buttons */
+.Previous,
+.Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.Next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover,
+.Next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Slideshow text */
+.text {
+  color: white;
+  padding: 0.5vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Josefin Slab", serif;
+  letter-spacing: 0.1vw;
+  font-size: 1vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+  border-radius: 0px 0px 7px 7px;
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: 0.3vw;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index: 1;
+}
+
+/* Hover effect for slideshow dots */
+.active,
+.dot:hover {
+  background-color: black;
+}
+
+/* Fading animation for slideshow */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+}
+.contact {
+  cursor: pointer;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*-------------------------------------------------- End Slideshow Styling -----------------------------------*/
+
 /* Table -------------------------------------- */
 * {
   box-sizing: border-box;
@@ -191,7 +316,199 @@ footer {
   display: table;
   clear: both;
 }
-/* Contact form --------------------------------- */
+.Pop_Up_Button {
+  position: fixed;
+  bottom: 1.75vw;
+  right: 1.75vw;
+  width: 25vw;
+  background-color: white;
+  color: black;
+  border: solid black;
+  cursor: pointer;
+  -webkit-animation: movePopup 5s;
+  animation: movePopup 5s;
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+  from {
+    right: -40vw;
+  }
+  to {
+    right: 1.75vw;
+  }
+}
+
+@-webkit-keyframes movePopup {
+  from {
+    right: -40vw;
+  }
+  to {
+    right: 1.75vw;
+  }
+}
+
+/* Styling for the contact form */
+.form-popup {
+  z-index: 8;
+  display: none;
+  position: fixed;
+  bottom: 0.5vw;
+  right: 0.5vw;
+}
+
+/* Form styling */
+.form-container {
+  max-width: 49vw;
+  padding: 1vw;
+  background-color: white;
+}
+
+/* Input fields */
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 0.93vw;
+  margin: 0.6vw 0 0.6vw 0;
+  border: none;
+  background: Gainsboro;
+  font-size: 1vw;
+}
+
+/* General styling for all buttons */
+button {
+  font-family: "Josefin Slab", serif;
+  letter-spacing: 0.3vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1.5vw;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover,
+.form-container .btn:hover {
+  color: white;
+  background-color: black;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  border-color: silver;
+}
+
+/* Submit button */
+.form-container .btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+  margin-bottom: 1vh;
+}
+
+/* Close button */
+.form-container .cancel {
+  background-color: black;
+  color: white;
+  border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+  color: white;
+  background-color: darkred;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  border-color: black;
+}
+/*-------------------------------------------End of Contact Form Styling ----------------------------------------------*/
+
+@media screen and (max-width: 527px) {
+  p {
+    font-size: 3.75vw;
+  }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+  p {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+  p {
+    font-size: 2.75vw;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+  p {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+  p {
+    font-size: 2.25vw;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+  p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+  p {
+    font-size: 1.75vw;
+  }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+  p {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 2270px) {
+  p {
+    font-size: 1.35vw;
+  }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+
+@media screen and (max-width: 1080px) {
+  .Navbar a {
+    width: 20%;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .quote {
+    font-size: 3.5vw;
+  }
+
+  .white-text {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (min-width: 1725px) {
+  .Column_1 {
+    height: 550px;
+  }
+  .Column_2 {
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  h1 {
+    margin-top: 0;
+  }
+}
+/***** End of Media Query Section *****/
 input[type="text"],
 input[type="email"] {
   width: 100%;
