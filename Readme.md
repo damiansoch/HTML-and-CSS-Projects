@@ -1,6 +1,7 @@
 HTML and CSS Projects
 
-This is a sample websites that I made using HTML and CSS.
+This is a sample websites that I made using HTML CSS and JavaScript.
+
 
 PROJECTS
 
@@ -15,3 +16,5 @@ DKMS Web Design (One page website) --- This is an example of the one page websit
 
 Academy Cinemas Site and  
 New Bootstrap project --- This are example of the websites styled in bootstrap 4. They contain many Bootstrap components including but not limited to a navbar, form cards, carousele and dropdowns.
+
+Portfilio Website --- This is website that uses HTML CSS and JavaScript
